@@ -69,9 +69,8 @@ jobs:
 
           if changed:
               ET.indent(tree, space="  ")
-              # Preserve XML declaration
-              with open("plugins.xml", "wb") as f:
-                  f.write(b"<?xml version = '1.0' encoding = 'UTF-8'?>\n")
+              with open("plugins.xml", "w", encoding="utf-8") as f:
+                  f.write("<?xml version = '1.0' encoding = 'UTF-8'?>\n")
                   tree.write(f, encoding="unicode", xml_declaration=False)
               print("plugins.xml updated.")
           else:
