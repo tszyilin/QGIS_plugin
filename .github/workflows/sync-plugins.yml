@@ -1,0 +1,89 @@
+name: Sync external plugin versions
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'   # every 5 minutes
+  workflow_dispatch:          # allow manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch external plugins.xml files and sync versions
+        run: |
+          python3 - <<'EOF'
+          import urllib.request
+          import xml.etree.ElementTree as ET
+          import copy
+
+          EXTERNAL = [
+              "https://raw.githubusercontent.com/tszyilin/MapThemeToolbox/main/plugins.xml",
+              "https://raw.githubusercontent.com/tszyilin/QGIS_RORB/main/plugins.xml",
+          ]
+
+          # Load consolidated plugins.xml
+          tree = ET.parse("plugins.xml")
+          root = tree.getroot()
+          ET.register_namespace("", "")
+
+          # Build lookup by plugin name
+          local_plugins = {p.get("name"): p for p in root.findall("pyqgis_plugin")}
+
+          changed = False
+
+          for url in EXTERNAL:
+              try:
+                  with urllib.request.urlopen(url, timeout=15) as r:
+                      remote = ET.fromstring(r.read())
+              except Exception as e:
+                  print(f"WARNING: could not fetch {url}: {e}")
+                  continue
+
+              for remote_plugin in remote.findall("pyqgis_plugin"):
+                  name = remote_plugin.get("name")
+                  remote_ver = remote_plugin.get("version", "")
+
+                  if name not in local_plugins:
+                      print(f"NEW plugin detected: {name} {remote_ver} — add it manually to plugins.xml")
+                      continue
+
+                  local_plugin = local_plugins[name]
+                  local_ver = local_plugin.get("version", "")
+
+                  if remote_ver != local_ver:
+                      print(f"UPDATE {name}: {local_ver} → {remote_ver}")
+                      # Replace all child elements from the remote entry
+                      for child in list(local_plugin):
+                          local_plugin.remove(child)
+                      for child in list(remote_plugin):
+                          local_plugin.append(copy.deepcopy(child))
+                      local_plugin.set("version", remote_ver)
+                      changed = True
+                  else:
+                      print(f"OK {name}: {local_ver}")
+
+          if changed:
+              ET.indent(tree, space="  ")
+              # Preserve XML declaration
+              with open("plugins.xml", "wb") as f:
+                  f.write(b"<?xml version = '1.0' encoding = 'UTF-8'?>\n")
+                  tree.write(f, encoding="unicode", xml_declaration=False)
+              print("plugins.xml updated.")
+          else:
+              print("No changes.")
+          EOF
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet plugins.xml || (
+            git add plugins.xml &&
+            git commit -m "chore: sync external plugin versions [skip ci]"  &&
+            git push
+          )
