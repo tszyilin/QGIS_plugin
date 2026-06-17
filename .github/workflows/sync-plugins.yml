@@ -83,6 +83,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git diff --quiet plugins.xml || (
             git add plugins.xml &&
-            git commit -m "chore: sync external plugin versions [skip ci]"  &&
+            git commit -m "chore: sync external plugin versions [skip ci]" &&
+            git pull --rebase &&
             git push
           )
