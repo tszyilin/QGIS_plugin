@@ -22,14 +22,14 @@
     <average_vote>0</average_vote>
     <rating_votes>0</rating_votes>
   </pyqgis_plugin>
-  <pyqgis_plugin name="RORB QGIS" version="2.29">
+  <pyqgis_plugin name="RORB QGIS" version="2.30">
     <description>View RORB results: browse .out files, plot hydrographs, export critical events</description>
-    <about>v2.29: Rename plugin to RORB QGIS. v2.28: Hydrograph + hyetograph zero-padded at start/end; editable export name column in preview; rainfall read from .stm when .out has none. v2.27: Fix .stm rainfall parser. v2.26: Nodes-only .catg export.</about>
-    <version>2.29</version>
+    <about>v2.30: Persist scenarios across sessions; rename scenario; remove Compare tab; rainfall overlay on hydrograph viewer. v2.29: Rename plugin to RORB QGIS. v2.28: Hydrograph + hyetograph zero-padded at start/end; editable export name column in preview; rainfall read from .stm when .out has none.</about>
+    <version>2.30</version>
     <qgis_minimum_version>3.16</qgis_minimum_version>
     <homepage>https://github.com/tszyilin/QGIS_RORB</homepage>
     <file_name>rorb_qgis.zip</file_name>
-    <icon></icon>
+    <icon />
     <author_name>Safin</author_name>
     <download_url>https://raw.githubusercontent.com/tszyilin/QGIS_RORB/main/rorb_qgis.zip</download_url>
     <uploaded_by>tszyilin</uploaded_by>
