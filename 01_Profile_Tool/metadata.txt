@@ -1,0 +1,14 @@
+[general]
+name=Profile Tool
+qgisMinimumVersion=3.0
+description=Create cross-section profile grids for geotechnical and hydrogeological sections
+version=0.1
+author=tszyilin
+email=tszyilin@gmail.com
+homepage=
+tracker=
+repository=
+tags=profile, cross-section, grid, geology
+category=Vector
+experimental=True
+deprecated=False
