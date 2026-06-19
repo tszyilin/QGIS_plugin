@@ -81,7 +81,8 @@ class ProfileToolDialog(QDialog):
             QMessageBox.warning(self, 'Invalid Input', 'Segment and interval must be greater than zero.')
             return
 
-        layer = QgsVectorLayer('LineString?crs=EPSG:3857', 'Profile Grid', 'memory')
+        crs = QgsProject.instance().crs().authid()
+        layer = QgsVectorLayer(f'LineString?crs={crs}', 'Profile Grid', 'memory')
         provider = layer.dataProvider()
         provider.addAttributes([QgsField('type', QVariant.String)])
         layer.updateFields()
