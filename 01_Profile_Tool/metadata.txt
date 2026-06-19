@@ -1,8 +1,8 @@
 [general]
-name=Profile Tool
+name=Profile Plot
 qgisMinimumVersion=3.0
 description=Create cross-section profile grids for geotechnical and hydrogeological sections
-version=0.2
+version=0.3
 author=tszyilin
 email=tszyilin@gmail.com
 homepage=

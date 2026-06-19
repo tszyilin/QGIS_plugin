@@ -10,13 +10,13 @@ class ProfileTool:
         self.action = None
 
     def initGui(self):
-        self.action = QAction('Profile Tool', self.iface.mainWindow())
+        self.action = QAction('Profile Plot', self.iface.mainWindow())
         self.action.triggered.connect(self.run)
-        self.iface.addPluginToMenu('&Profile Tool', self.action)
+        self.iface.addPluginToMenu('&Profile Plot', self.action)
         self.iface.addToolBarIcon(self.action)
 
     def unload(self):
-        self.iface.removePluginMenu('&Profile Tool', self.action)
+        self.iface.removePluginMenu('&Profile Plot', self.action)
         self.iface.removeToolBarIcon(self.action)
 
     def run(self):

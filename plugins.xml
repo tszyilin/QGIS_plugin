@@ -66,10 +66,10 @@
     <average_vote>0</average_vote>
     <rating_votes>0</rating_votes>
   </pyqgis_plugin>
-  <pyqgis_plugin name="Profile Tool" version="0.2">
+  <pyqgis_plugin name="Profile Plot" version="0.3">
     <description>Create cross-section profile grids for geotechnical and hydrogeological sections</description>
-    <about>v0.2: Use project CRS instead of hardcoded EPSG:3857. v0.1: Initial release.</about>
-    <version>0.2</version>
+    <about>v0.3: Rename to Profile Plot. v0.2: Use project CRS instead of hardcoded EPSG:3857. v0.1: Initial release.</about>
+    <version>0.3</version>
     <qgis_minimum_version>3.0</qgis_minimum_version>
     <homepage>https://github.com/tszyilin/QGIS_plugin</homepage>
     <file_name>profile_tool.zip</file_name>
@@ -83,7 +83,7 @@
     <deprecated>False</deprecated>
     <tracker>https://github.com/tszyilin/QGIS_plugin/issues</tracker>
     <repository>https://github.com/tszyilin/QGIS_plugin</repository>
-    <tags>profile, cross-section, grid, geology</tags>
+    <tags>profile, cross-section, grid, geology, plot</tags>
     <downloads>0</downloads>
     <average_vote>0</average_vote>
     <rating_votes>0</rating_votes>
