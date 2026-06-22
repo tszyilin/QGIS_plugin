@@ -22,10 +22,10 @@
     <average_vote>0</average_vote>
     <rating_votes>0</rating_votes>
   </pyqgis_plugin>
-  <pyqgis_plugin name="RORB QGIS" version="2.32">
+  <pyqgis_plugin name="RORB QGIS" version="2.33">
     <description>View RORB results: browse .out files, plot hydrographs, export critical events</description>
-    <about>v2.32: Fix AttributeError on _cmp_scenario_rows before Compare tab is built. v2.30: Persist scenarios across sessions; rename scenario; remove Compare tab; rainfall overlay on hydrograph viewer. v2.29: Rename plugin to RORB QGIS. v2.28: Hydrograph + hyetograph zero-padded at start/end; editable export name column in preview; rainfall read from .stm when .out has none.</about>
-    <version>2.32</version>
+    <about>v2.33: Rainfall overlay off by default; shows rainfall from ticked TP (rep TP preferred); results viewer is now a dockable panel. v2.32: Fix AttributeError on _cmp_scenario_rows before Compare tab is built. v2.30: Persist scenarios across sessions; rename scenario; remove Compare tab; rainfall overlay on hydrograph viewer. v2.29: Rename plugin to RORB QGIS. v2.28: Hydrograph + hyetograph zero-padded at start/end; editable export name column in preview; rainfall read from .stm when .out has none.</about>
+    <version>2.33</version>
     <qgis_minimum_version>3.16</qgis_minimum_version>
     <homepage>https://github.com/tszyilin/QGIS_RORB</homepage>
     <file_name>rorb_qgis.zip</file_name>
@@ -34,7 +34,7 @@
     <download_url>https://raw.githubusercontent.com/tszyilin/QGIS_RORB/main/rorb_qgis.zip</download_url>
     <uploaded_by>tszyilin</uploaded_by>
     <create_date>2026-06-10</create_date>
-    <update_date>2026-06-18</update_date>
+    <update_date>2026-06-22</update_date>
     <experimental>False</experimental>
     <deprecated>False</deprecated>
     <tracker>https://github.com/tszyilin/QGIS_RORB/issues</tracker>
@@ -44,14 +44,14 @@
     <average_vote>0</average_vote>
     <rating_votes>0</rating_votes>
   </pyqgis_plugin>
-<pyqgis_plugin name="Profile Plot" version="0.3">
+  <pyqgis_plugin name="Profile Plot" version="0.3">
     <description>Create cross-section profile grids for geotechnical and hydrogeological sections</description>
     <about>v0.3: Rename to Profile Plot. v0.2: Use project CRS instead of hardcoded EPSG:3857. v0.1: Initial release.</about>
     <version>0.3</version>
     <qgis_minimum_version>3.0</qgis_minimum_version>
     <homepage>https://github.com/tszyilin/QGIS_plugin</homepage>
     <file_name>profile_tool.zip</file_name>
-    <icon></icon>
+    <icon />
     <author_name>tszyilin</author_name>
     <download_url>https://raw.githubusercontent.com/tszyilin/QGIS_plugin/main/01_Profile_Tool/profile_tool.zip</download_url>
     <uploaded_by>tszyilin</uploaded_by>
