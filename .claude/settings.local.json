@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git config *)",
+      "Bash(git branch *)",
+      "Bash(git push *)",
+      "Bash(gh repo *)",
+      "Bash(git commit *)",
+      "Bash(git pull *)",
+      "Bash(powershell Compress-Archive -Path __init__.py,profile_tool.py,profile_tool_dialog.py,metadata.txt -DestinationPath profile_tool.zip -Force)",
+      "Bash(powershell -Command ' *)",
+      "Bash(powershell -Command \"Add-Type -Assembly System.IO.Compression.FileSystem; [System.IO.Compression.ZipFile]::OpenRead\\('01_Profile_Tool/profile_tool.zip'\\).Entries | Select-Object FullName\")",
+      "Bash(python3 -c ' *)",
+      "Bash(gh api *)",
+      "Bash(python3 -c \"import sys,base64; print\\(base64.b64decode\\(sys.stdin.read\\(\\)\\).decode\\(\\)\\)\")"
+    ]
+  }
+}
