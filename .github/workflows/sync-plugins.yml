@@ -14,12 +14,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4.2.2
 
+      - name: Pull latest changes before syncing
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase
+
       - name: Fetch external plugins.xml files and sync versions
         run: |
           python3 - <<'EOF'
           import urllib.request
           import xml.etree.ElementTree as ET
           import copy
+          from collections import defaultdict
 
           EXTERNAL = [
               "https://raw.githubusercontent.com/tszyilin/MapThemeToolbox/main/plugins.xml",
@@ -31,8 +38,10 @@ jobs:
           root = tree.getroot()
           ET.register_namespace("", "")
 
-          # Build lookup by plugin name
-          local_plugins = {p.get("name"): p for p in root.findall("pyqgis_plugin")}
+          # Build lookup by plugin name — keep ALL entries (e.g. separate 3.x / 4.x blocks)
+          local_plugins = defaultdict(list)
+          for p in root.findall("pyqgis_plugin"):
+              local_plugins[p.get("name")].append(p)
 
           changed = False
 
@@ -44,28 +53,43 @@ jobs:
                   print(f"WARNING: could not fetch {url}: {e}")
                   continue
 
-              for remote_plugin in remote.findall("pyqgis_plugin"):
-                  name = remote_plugin.get("name")
-                  remote_ver = remote_plugin.get("version", "")
+              # Get the latest version from remote (take the first entry)
+              remote_plugins = remote.findall("pyqgis_plugin")
+              if not remote_plugins:
+                  continue
+              name = remote_plugins[0].get("name")
+              remote_ver = remote_plugins[0].get("version", "")
 
-                  if name not in local_plugins:
-                      print(f"NEW plugin detected: {name} {remote_ver} — add it manually to plugins.xml")
-                      continue
+              if name not in local_plugins:
+                  print(f"NEW plugin detected: {name} {remote_ver} — add it manually to plugins.xml")
+                  continue
 
-                  local_plugin = local_plugins[name]
+              for local_plugin in local_plugins[name]:
                   local_ver = local_plugin.get("version", "")
+                  qgis_min = local_plugin.findtext("qgis_minimum_version", "")
+                  qgis_max = local_plugin.findtext("qgis_maximum_version", "")
+
+                  # Find the matching remote entry by qgis version range
+                  remote_match = None
+                  for rp in remote_plugins:
+                      if (rp.findtext("qgis_minimum_version", "") == qgis_min and
+                              rp.findtext("qgis_maximum_version", "") == qgis_max):
+                          remote_match = rp
+                          break
+                  # Fall back to first remote entry if no range match
+                  if remote_match is None:
+                      remote_match = remote_plugins[0]
 
                   if remote_ver != local_ver:
-                      print(f"UPDATE {name}: {local_ver} → {remote_ver}")
-                      # Replace all child elements from the remote entry
+                      print(f"UPDATE {name} (QGIS {qgis_min}–{qgis_max}): {local_ver} → {remote_ver}")
                       for child in list(local_plugin):
                           local_plugin.remove(child)
-                      for child in list(remote_plugin):
+                      for child in list(remote_match):
                           local_plugin.append(copy.deepcopy(child))
                       local_plugin.set("version", remote_ver)
                       changed = True
                   else:
-                      print(f"OK {name}: {local_ver}")
+                      print(f"OK {name} (QGIS {qgis_min}–{qgis_max}): {local_ver}")
 
           if changed:
               ET.indent(tree, space="  ")
@@ -79,11 +103,8 @@ jobs:
 
       - name: Commit if changed
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
           git diff --quiet plugins.xml || (
             git add plugins.xml &&
             git commit -m "chore: sync external plugin versions [skip ci]" &&
-            git pull --rebase &&
             git push
           )
