@@ -30,7 +30,7 @@ jobs:
 
           EXTERNAL = [
               "https://raw.githubusercontent.com/tszyilin/MapThemeToolbox/main/plugins.xml",
-              "https://raw.githubusercontent.com/tszyilin/QGIS_RORB/main/plugins.xml",
+              "https://raw.githubusercontent.com/tszyilin/QGIS_RORB/master/plugins.xml",
           ]
 
           # Load consolidated plugins.xml
