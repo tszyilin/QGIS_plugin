@@ -1,14 +1,14 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <plugins>
-  <pyqgis_plugin name="MapThemeToolbox" version="3.6">
+  <pyqgis_plugin name="MapThemeToolbox" version="3.7">
     <description>Map Theme toolbox: Modify, Repair, Present themes, Sync and Auto-Save</description>
     <about>A combined toolbar for managing QGIS Map Themes: modify mutual layer visibility across themes, repair broken layer paths, present themes with a single click, sync with Excel/CSV/GeoPackage, and auto-save the project on a timer. Compatible with QGIS 3.22+ and QGIS 4.x.</about>
-    <version>3.6</version>
+    <version>3.7</version>
     <qgis_minimum_version>3.22</qgis_minimum_version>
     <qgis_maximum_version>4.99</qgis_maximum_version>
     <homepage>https://github.com/tszyilin/MapThemeToolbox</homepage>
     <file_name>MapThemeToolbox_Unified.zip</file_name>
-    <icon></icon>
+    <icon />
     <author_name>Safin</author_name>
     <download_url>https://raw.githubusercontent.com/tszyilin/MapThemeToolbox/main/MapThemeToolbox_Unified.zip</download_url>
     <uploaded_by>tszyilin</uploaded_by>
@@ -25,13 +25,13 @@
   </pyqgis_plugin>
   <pyqgis_plugin name="RORB Tools" version="1.0">
     <description>RORB catchment preparation, control vector builder, and results viewer.</description>
-    <about>A combined RORB toolbox with three toolbar icons: (1) Create RORB Layers — layer templates; (2) Build RORB .catg — auto-name, check links, build RORB/URBS control vectors; (3) RORB Results Viewer — browse .out files, plot hydrographs, export critical events. Requires pyromb>=0.3 for build tools.</about>
+    <about>A combined RORB toolbox with three toolbar icons: (1) Create RORB Layers — layer templates; (2) Build RORB .catg — auto-name, check links, build RORB/URBS control vectors; (3) RORB Results Viewer — browse .out files, plot hydrographs, export critical events. Requires pyromb&gt;=0.3 for build tools.</about>
     <version>1.0</version>
     <qgis_minimum_version>3.22</qgis_minimum_version>
     <qgis_maximum_version>4.99</qgis_maximum_version>
     <homepage>https://github.com/tszyilin/QGIS_RORB</homepage>
     <file_name>rorb_suite.zip</file_name>
-    <icon></icon>
+    <icon />
     <author_name>Tom Norman / Safin</author_name>
     <download_url>https://raw.githubusercontent.com/tszyilin/QGIS_RORB/master/rorb_suite.zip</download_url>
     <uploaded_by>tszyilin</uploaded_by>
