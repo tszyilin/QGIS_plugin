@@ -82,10 +82,16 @@ jobs:
 
                   if remote_ver != local_ver:
                       print(f"UPDATE {name} (QGIS {qgis_min}–{qgis_max}): {local_ver} → {remote_ver}")
+                      # Copy metadata from remote but keep local QGIS version range
+                      KEEP_LOCAL = {"qgis_minimum_version", "qgis_maximum_version"}
                       for child in list(local_plugin):
                           local_plugin.remove(child)
                       for child in list(remote_match):
-                          local_plugin.append(copy.deepcopy(child))
+                          if child.tag in KEEP_LOCAL:
+                              el = ET.SubElement(local_plugin, child.tag)
+                              el.text = qgis_min if child.tag == "qgis_minimum_version" else qgis_max
+                          else:
+                              local_plugin.append(copy.deepcopy(child))
                       local_plugin.set("version", remote_ver)
                       changed = True
                   else:
