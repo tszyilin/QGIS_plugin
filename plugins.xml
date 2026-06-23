@@ -1,29 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <plugins>
-  <!-- MapThemeToolbox – QGIS 3.x -->
-  <pyqgis_plugin name="MapThemeToolbox" version="3.4">
-    <description>Map Theme toolbox: Modify, Repair, Present themes, Sync and Auto-Save</description>
-    <about>A combined toolbar for managing QGIS Map Themes: modify mutual layer visibility across themes, repair broken layer paths, present themes with a single click, sync with Excel/CSV/GeoPackage, and auto-save the project on a timer. Compatible with QGIS 3.22+ and QGIS 4.x.</about>
-    <version>3.4</version>
-    <qgis_minimum_version>3.22</qgis_minimum_version>
-    <qgis_maximum_version>3.99</qgis_maximum_version>
-    <homepage>https://github.com/tszyilin/MapThemeToolbox</homepage>
-    <file_name>MapThemeToolbox.zip</file_name>
-    <icon />
-    <author_name>Safin</author_name>
-    <download_url>https://raw.githubusercontent.com/tszyilin/MapThemeToolbox/main/MapThemeToolbox.zip</download_url>
-    <uploaded_by>tszyilin</uploaded_by>
-    <create_date>2026-03-31</create_date>
-    <update_date>2026-06-23</update_date>
-    <experimental>False</experimental>
-    <deprecated>False</deprecated>
-    <tracker>https://github.com/tszyilin/MapThemeToolbox/issues</tracker>
-    <repository>https://github.com/tszyilin/MapThemeToolbox</repository>
-    <tags>map themes, layers, visibility</tags>
-    <downloads>0</downloads>
-    <average_vote>0</average_vote>
-    <rating_votes>0</rating_votes>
-  </pyqgis_plugin>
   <!-- MapThemeToolbox – QGIS 4.x -->
   <pyqgis_plugin name="MapThemeToolbox" version="3.4">
     <description>Map Theme toolbox: Modify, Repair, Present themes, Sync and Auto-Save</description>
@@ -48,26 +24,26 @@
     <average_vote>0</average_vote>
     <rating_votes>0</rating_votes>
   </pyqgis_plugin>
-  <!-- RORB QGIS – QGIS 3.x -->
-  <pyqgis_plugin name="RORB QGIS" version="2.37">
-    <description>View RORB results: browse .out files, plot hydrographs, export critical events</description>
-    <about>v2.37: Fix AEP label for EY events (e.g. aep0p2EY now shows "0.2 EY" not "0% AEP"); correct EY sort order. v2.36: Fix hydrograph viewer crash — stale _ax2.clear() call after rainfall removal. v2.35: Results viewer opens as floating window by default (still dockable). v2.34: Remove rainfall from hydrograph viewer; fix rainfall axis label to right side on critical events plot. v2.33: Rainfall overlay off by default; shows rainfall from ticked TP (rep TP preferred); results viewer is now a dockable panel. v2.32: Fix AttributeError on _cmp_scenario_rows before Compare tab is built. v2.30: Persist scenarios across sessions; rename scenario; remove Compare tab; rainfall overlay on hydrograph viewer. v2.29: Rename plugin to RORB QGIS. v2.28: Hydrograph + hyetograph zero-padded at start/end; editable export name column in preview; rainfall read from .stm when .out has none.</about>
-    <version>2.37</version>
-    <qgis_minimum_version>3.16</qgis_minimum_version>
+  <!-- MapThemeToolbox – QGIS 3.x -->
+  <pyqgis_plugin name="MapThemeToolbox" version="3.4">
+    <description>Map Theme toolbox: Modify, Repair, Present themes, Sync and Auto-Save</description>
+    <about>A combined toolbar for managing QGIS Map Themes: modify mutual layer visibility across themes, repair broken layer paths, present themes with a single click, sync with Excel/CSV/GeoPackage, and auto-save the project on a timer. Compatible with QGIS 3.22+ and QGIS 4.x.</about>
+    <version>3.4</version>
+    <qgis_minimum_version>3.22</qgis_minimum_version>
     <qgis_maximum_version>3.99</qgis_maximum_version>
-    <homepage>https://github.com/tszyilin/QGIS_RORB</homepage>
-    <file_name>rorb_qgis.zip</file_name>
+    <homepage>https://github.com/tszyilin/MapThemeToolbox</homepage>
+    <file_name>MapThemeToolbox.zip</file_name>
     <icon />
     <author_name>Safin</author_name>
-    <download_url>https://raw.githubusercontent.com/tszyilin/QGIS_RORB/main/rorb_qgis.zip</download_url>
+    <download_url>https://raw.githubusercontent.com/tszyilin/MapThemeToolbox/main/MapThemeToolbox.zip</download_url>
     <uploaded_by>tszyilin</uploaded_by>
-    <create_date>2026-06-10</create_date>
-    <update_date>2026-06-22</update_date>
+    <create_date>2026-03-31</create_date>
+    <update_date>2026-06-23</update_date>
     <experimental>False</experimental>
     <deprecated>False</deprecated>
-    <tracker>https://github.com/tszyilin/QGIS_RORB/issues</tracker>
-    <repository>https://github.com/tszyilin/QGIS_RORB</repository>
-    <tags>rorb,hydrology,routing,flood,rainfall,runoff</tags>
+    <tracker>https://github.com/tszyilin/MapThemeToolbox/issues</tracker>
+    <repository>https://github.com/tszyilin/MapThemeToolbox</repository>
+    <tags>map themes, layers, visibility</tags>
     <downloads>0</downloads>
     <average_vote>0</average_vote>
     <rating_votes>0</rating_votes>
@@ -87,6 +63,30 @@
     <uploaded_by>tszyilin</uploaded_by>
     <create_date>2026-06-10</create_date>
     <update_date>2026-06-23</update_date>
+    <experimental>False</experimental>
+    <deprecated>False</deprecated>
+    <tracker>https://github.com/tszyilin/QGIS_RORB/issues</tracker>
+    <repository>https://github.com/tszyilin/QGIS_RORB</repository>
+    <tags>rorb,hydrology,routing,flood,rainfall,runoff</tags>
+    <downloads>0</downloads>
+    <average_vote>0</average_vote>
+    <rating_votes>0</rating_votes>
+  </pyqgis_plugin>
+  <!-- RORB QGIS – QGIS 3.x -->
+  <pyqgis_plugin name="RORB QGIS" version="2.37">
+    <description>View RORB results: browse .out files, plot hydrographs, export critical events</description>
+    <about>v2.37: Fix AEP label for EY events (e.g. aep0p2EY now shows "0.2 EY" not "0% AEP"); correct EY sort order. v2.36: Fix hydrograph viewer crash — stale _ax2.clear() call after rainfall removal. v2.35: Results viewer opens as floating window by default (still dockable). v2.34: Remove rainfall from hydrograph viewer; fix rainfall axis label to right side on critical events plot. v2.33: Rainfall overlay off by default; shows rainfall from ticked TP (rep TP preferred); results viewer is now a dockable panel. v2.32: Fix AttributeError on _cmp_scenario_rows before Compare tab is built. v2.30: Persist scenarios across sessions; rename scenario; remove Compare tab; rainfall overlay on hydrograph viewer. v2.29: Rename plugin to RORB QGIS. v2.28: Hydrograph + hyetograph zero-padded at start/end; editable export name column in preview; rainfall read from .stm when .out has none.</about>
+    <version>2.37</version>
+    <qgis_minimum_version>3.16</qgis_minimum_version>
+    <qgis_maximum_version>3.99</qgis_maximum_version>
+    <homepage>https://github.com/tszyilin/QGIS_RORB</homepage>
+    <file_name>rorb_qgis.zip</file_name>
+    <icon />
+    <author_name>Safin</author_name>
+    <download_url>https://raw.githubusercontent.com/tszyilin/QGIS_RORB/main/rorb_qgis.zip</download_url>
+    <uploaded_by>tszyilin</uploaded_by>
+    <create_date>2026-06-10</create_date>
+    <update_date>2026-06-22</update_date>
     <experimental>False</experimental>
     <deprecated>False</deprecated>
     <tracker>https://github.com/tszyilin/QGIS_RORB/issues</tracker>
