@@ -23,6 +23,29 @@
     <average_vote>0</average_vote>
     <rating_votes>0</rating_votes>
   </pyqgis_plugin>
+  <pyqgis_plugin name="DDM HydroLogic" version="1.1">
+    <description>Delineate and create model-ready catchments interactively. Trace D8 flow paths, click the streams that matter, drop an outlet line, and export straight to GeoPackage, RORB, WBNM, XP-RAFTS or TUFLOW.</description>
+    <about>Setting up a hydrologic model usually means a few hours of GIS prep work before the modelling even starts. DDM HydroLogic condenses some of the initial steps into one interactive session: it traces D8 flow paths from a DEM, ranks them by Strahler order, and lets you pick the relevant drainage. Draw an outlet line, set a minimum subcatchment size, and DDM HydroLogic cuts the catchment into dissolved subcatchment polygons — then you have choices of exporting as: GeoPackage of flow paths and subcatchments, RORB .catg GE-ready catchment file, WBNM .wbn runfile, XP-RAFTS .xpx exchange file, or some of the most popular TUFLOW xxx_R.shp. It is important to note that all hydrological/hydraulic choices and parameters, such as rainfall, losses, Manning's coefficients, subcatchment types, slope, etc.. have been deliberately left blank or default values. Requirements and notes: QGIS 3.28 LTR or newer (including QGIS 4.x), with no extra Python packages to install (it relies on the numpy and GDAL libraries already bundled with QGIS). Works best for DEMs in projected CRS for meaningful areas and lengths. Licensed under the GNU General Public License version 2 or later.</about>
+    <version>1.1</version>
+    <qgis_minimum_version>3.28</qgis_minimum_version>
+    <qgis_maximum_version>4.99</qgis_maximum_version>
+    <homepage>https://github.com/0verlord84/ddm-hydrologic</homepage>
+    <file_name>DDM_HydroLogic-1.1.zip</file_name>
+    <icon />
+    <author_name>Davide Di Mauro</author_name>
+    <download_url>https://github.com/tszyilin/QGIS_DDM_HydroLogic/raw/main/DDM_HydroLogic-1.1.zip</download_url>
+    <uploaded_by>tszyilin</uploaded_by>
+    <create_date>2026-06-24</create_date>
+    <update_date>2026-06-24</update_date>
+    <experimental>False</experimental>
+    <deprecated>False</deprecated>
+    <tracker>https://github.com/0verlord84/ddm-hydrologic/issues</tracker>
+    <repository>https://github.com/0verlord84/ddm-hydrologic</repository>
+    <tags>catchment,watershed,hydrology,DEM,D8,Strahler,subcatchment,RORB,WBNM,XP-RAFTS,TUFLOW</tags>
+    <downloads>0</downloads>
+    <average_vote>0</average_vote>
+    <rating_votes>0</rating_votes>
+  </pyqgis_plugin>
   <pyqgis_plugin name="RORB Tools" version="1.12">
     <description>RORB catchment preparation, control vector builder, and results viewer.</description>
     <about>A combined RORB toolbox with three toolbar icons: (1) Create RORB Layers — layer templates; (2) Build RORB .catg — auto-name, check links, build RORB/URBS control vectors; (3) RORB Results Viewer — browse .out files, plot hydrographs, export critical events. Bundles pyromb&gt;=0.3 for build tools — no separate install needed.</about>
