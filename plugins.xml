@@ -30,10 +30,10 @@
     <qgis_minimum_version>3.28</qgis_minimum_version>
     <qgis_maximum_version>4.99</qgis_maximum_version>
     <homepage>https://github.com/0verlord84/ddm-hydrologic</homepage>
-    <file_name>DDM_HydroLogic-1.1.zip</file_name>
+    <file_name>DDM_HydroLogic.zip</file_name>
     <icon />
     <author_name>Davide Di Mauro</author_name>
-    <download_url>https://github.com/tszyilin/QGIS_DDM_HydroLogic/raw/main/DDM_HydroLogic-1.1.zip</download_url>
+    <download_url>https://github.com/tszyilin/QGIS_DDM_HydroLogic/raw/main/DDM_HydroLogic.zip</download_url>
     <uploaded_by>tszyilin</uploaded_by>
     <create_date>2026-06-24</create_date>
     <update_date>2026-06-24</update_date>
