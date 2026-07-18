@@ -18,3 +18,4 @@ A custom QGIS plugin repository hosting all plugins by Safin. Uninstalled plugin
 | MapThemeToolbox | 3.8 | [tszyilin/MapThemeToolbox](https://github.com/tszyilin/MapThemeToolbox) | Manage QGIS Map Themes: modify visibility, repair paths, present themes, sync with Excel/CSV/GeoPackage, auto-save |
 | RORB Tools | 1.12 | [tszyilin/QGIS_RORB](https://github.com/tszyilin/QGIS_RORB) | RORB catchment prep, control vector builder, and results viewer — browse `.out` files, plot hydrographs, export critical events |
 | DDM HydroLogic | 1.1 | [0verlord84/ddm-hydrologic](https://github.com/0verlord84/ddm-hydrologic) | Delineate catchments interactively from a DEM and export to GeoPackage, RORB, WBNM, XP-RAFTS or TUFLOW |
+| Drain Design Toolbox | 1.0 | [tszyilin/Drain_Design_Toolbox](https://github.com/tszyilin/Drain_Design_Toolbox) | Toolbox for 1-D drain design (channel and pipe hydraulic analysis) |

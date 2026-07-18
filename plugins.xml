@@ -70,6 +70,29 @@ v1.2.0: Editor now includes .bat files; file list grouped by extension; dock sta
     <average_vote>0</average_vote>
     <rating_votes>0</rating_votes>
   </pyqgis_plugin>
+  <pyqgis_plugin name="Drain Design Toolbox" version="1.0">
+    <description>Toolbox for 1-D drain design (channel and pipe hydraulic analysis).</description>
+    <about>A QGIS plugin providing hydraulic analysis tools for 1-D drain design, starting with trapezoidal open-channel Manning/critical-flow analysis.</about>
+    <version>1.0</version>
+    <qgis_minimum_version>3.16</qgis_minimum_version>
+    <qgis_maximum_version>4.99</qgis_maximum_version>
+    <homepage>https://github.com/tszyilin/Drain_Design_Toolbox</homepage>
+    <file_name>Drain_Design_Toolbox.zip</file_name>
+    <icon />
+    <author_name>tszyilin</author_name>
+    <download_url>https://github.com/tszyilin/Drain_Design_Toolbox/releases/download/v1.0/Drain_Design_Toolbox.zip</download_url>
+    <uploaded_by>tszyilin</uploaded_by>
+    <create_date>2026-07-18</create_date>
+    <update_date>2026-07-18</update_date>
+    <experimental>True</experimental>
+    <deprecated>False</deprecated>
+    <tracker>https://github.com/tszyilin/Drain_Design_Toolbox/issues</tracker>
+    <repository>https://github.com/tszyilin/Drain_Design_Toolbox</repository>
+    <tags>hydraulics,channel,drain,manning,open channel,culvert</tags>
+    <downloads>0</downloads>
+    <average_vote>0</average_vote>
+    <rating_votes>0</rating_votes>
+  </pyqgis_plugin>
   <pyqgis_plugin name="RORB Tools" version="2.25">
     <description>RORB catchment preparation, control vector builder, and results viewer.</description>
     <about>A combined RORB toolbox with three toolbar icons: (1) Create RORB Layers — layer templates; (2) Build RORB .catg — auto-name, check links, build RORB/URBS control vectors; (3) RORB Results Viewer — browse .out files, plot hydrographs, export critical events. Bundles pyromb&gt;=0.3 for build tools — no separate install needed.</about>
