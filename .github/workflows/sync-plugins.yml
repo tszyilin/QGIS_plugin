@@ -33,7 +33,7 @@ jobs:
               "https://raw.githubusercontent.com/tszyilin/QGIS_RORB/master/plugins.xml",
               "https://raw.githubusercontent.com/tszyilin/TUFLOW_Studio/master/plugins.xml",
               "https://raw.githubusercontent.com/tszyilin/Drain_Design_Toolbox/main/plugins.xml",
-              "https://raw.githubusercontent.com/tszyilin/QGIS_Attribute_Table_Shortcut/main/plugins.xml",
+              "https://raw.githubusercontent.com/tszyilin/QGIS_Attribute_Table_Functions/main/plugins.xml",
           ]
 
           # Load consolidated plugins.xml

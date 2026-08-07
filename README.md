@@ -19,4 +19,4 @@ A custom QGIS plugin repository hosting all plugins by Safin. Uninstalled plugin
 | RORB Tools | 3.2 | [tszyilin/QGIS_RORB](https://github.com/tszyilin/QGIS_RORB) | RORB catchment prep, control vector builder, and results viewer — browse `.out` files, plot hydrographs, export critical events |
 | Drain Design Toolbox | 1.10 | [tszyilin/Drain_Design_Toolbox](https://github.com/tszyilin/Drain_Design_Toolbox) | Toolbox for 1-D drain design (channel and pipe hydraulic analysis) |
 | TUFLOW Studio | 1.3.0 | [tszyilin/TUFLOW_Studio](https://github.com/tszyilin/TUFLOW_Studio) | TUFLOW project management: root paths, file editor, and run logs |
-| Attribute Table shortcut | 1.0 | [tszyilin/QGIS_Attribute_Table_Shortcut](https://github.com/tszyilin/QGIS_Attribute_Table_Shortcut) | Adds Area, Length, X and Y buttons to the attribute table toolbar — inserts virtual fields with chosen units and decimal precision |
+| Attribute Table Functions | 1.0.0 | [tszyilin/QGIS_Attribute_Table_Functions](https://github.com/tszyilin/QGIS_Attribute_Table_Functions) | Attribute table toolbar buttons — Area, Length, X/Y virtual fields and Export CSV (with WKT geometry) |
