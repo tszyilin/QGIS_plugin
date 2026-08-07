@@ -2,7 +2,7 @@ name: Sync external plugin versions
 
 on:
   schedule:
-    - cron: '*/5 * * * *'   # every 5 minutes
+    - cron: '0 * * * *'   # every hour on the hour
   workflow_dispatch:          # allow manual trigger
 
 jobs:
