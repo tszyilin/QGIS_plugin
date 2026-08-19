@@ -97,10 +97,10 @@ v1.2.0: Editor now includes .bat files; file list grouped by extension; dock sta
     <average_vote>0</average_vote>
     <rating_votes>0</rating_votes>
   </pyqgis_plugin>
-  <pyqgis_plugin name="Attribute Table Functions" version="1.1.0">
+  <pyqgis_plugin name="Attribute Table Functions" version="1.1.1">
     <description>Adds Area, Length, X/Y coordinate, Stats, Renumber ID and Export CSV buttons to the QGIS attribute table toolbar.</description>
     <about>Adds toolbar buttons to every attribute table: Area (polygon), Length (line), X and Y (point) create virtual fields with configurable units, CRS and decimal precision; Stats shows total/max/min/max-min ratio for a numeric column; Renumber ID rewrites a numeric column with sequential values 1..N in the current row order; Export CSV writes the table (all or selected features) with WKT geometry. Buttons auto enable/disable based on the layer's geometry type. Uses ellipsoidal measurement so geographic (lat/lon) layers still produce correct metric values.</about>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <qgis_minimum_version>3.0</qgis_minimum_version>
     <qgis_maximum_version>4.99</qgis_maximum_version>
     <homepage>https://github.com/tszyilin/QGIS_Attribute_Table_Shortcut</homepage>
@@ -110,7 +110,8 @@ v1.2.0: Editor now includes .bat files; file list grouped by extension; dock sta
     <download_url>https://raw.githubusercontent.com/tszyilin/QGIS_Attribute_Table_Shortcut/main/attribute_table_functions.zip</download_url>
     <create_date>2026-08-07</create_date>
     <update_date>2026-08-19</update_date>
-    <changelog>v1.1.0: Added Stats (total/max/min/max-min ratio) and Renumber ID (1..N) buttons
+    <changelog>v1.1.1: Fix Stats/Renumber picking the wrong layer when a different layer was active in the Layers panel
+v1.1.0: Added Stats (total/max/min/max-min ratio) and Renumber ID (1..N) buttons
 v1.0.0: Renamed plugin to "Attribute Table Functions"; unified toolbar with Area, Length, X, Y and Export CSV
 v0.5: Added Export CSV button
 v0.4: X/Y CRS choice (project CRS or WGS84 lat/lon)
