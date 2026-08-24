@@ -20,4 +20,4 @@ A custom QGIS plugin repository hosting all plugins by Safin. Uninstalled plugin
 | Drain Design Toolbox | 2.2 | [tszyilin/Drain_Design_Toolbox](https://github.com/tszyilin/Drain_Design_Toolbox) | Toolbox for 1-D drain design (channel and pipe hydraulic analysis) |
 | TUFLOW Studio | 2.0.0 | [tszyilin/TUFLOW_Studio](https://github.com/tszyilin/TUFLOW_Studio) | TUFLOW project management: root paths, file editor, and run logs |
 | Attribute Table Functions | 1.1.1 | [tszyilin/QGIS_Attribute_Table_Functions](https://github.com/tszyilin/QGIS_Attribute_Table_Functions) | Attribute table toolbar buttons — Area, Length, X/Y virtual fields and Export CSV (with WKT geometry) |
-| Profile Plot + | 1.0 | [tszyilin/Profile_Toolbox_Plus](https://github.com/tszyilin/Profile_Toolbox_Plus) | Terrain profile plotting from rasters or point layers — profile statistics, multi-line plots, export to SVG/PDF/PNG/CSV and 3D DXF |
+| Profile Tool + | 1.0 | [tszyilin/Profile_Toolbox_Plus](https://github.com/tszyilin/Profile_Toolbox_Plus) | Terrain profile plotting from rasters or point layers — profile statistics, multi-line plots, export to SVG/PDF/PNG/CSV and 3D DXF |
